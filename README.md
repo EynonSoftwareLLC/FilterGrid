@@ -87,27 +87,27 @@ private GridResult Filter(FilterOptions options)
     
 - Create partial view.
 ```
-@model Eynon.FilterGrid.GridResult
+@model Eynon.FilterGrid.GridResult<Eynon.Sample.Models.FIPS>
 
 @foreach (var fips in Model.Results)
 {
-    
-        
+    <tr>
+        <td>
             @fips.STATE
-        
-        
+        </td>
+        <td>
             @fips.STATEFP
-        
-        
+        </td>
+        <td>
             @fips.COUNTYFP
-        
-        
+        </td>
+        <td>
             @fips.COUNTYNAME
-        
-        
+        </td>
+        <td>
             @fips.CLASSFP
-        
-    
+        </td>
+    </tr>
 }
 ```
     
