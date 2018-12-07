@@ -1,7 +1,7 @@
 # FilterGrid
 
 # Preview
-A preview can be seen at https://filtergrid.eynon.software
+A preview can be seen at http://filtergrid.eynon.software
 
 # Overview
 Filter Grid is an alternative open source tool for displaying tabular data pulled from a database in a useful way. FilterGrid was built specifically for applications using C# and Entity Framework Code First.
