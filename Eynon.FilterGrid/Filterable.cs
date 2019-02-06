@@ -13,7 +13,7 @@ namespace Eynon.FilterGrid
     public class Filterable<T> : Sortable<T> where T : class
     {
 
-        public Filterable(Dictionary<string, string> columns) : base(columns)
+        public Filterable(Dictionary<string, string> columns, DatabaseType dbtype = DatabaseType.Default) : base(columns, dbtype)
         {
 
         }

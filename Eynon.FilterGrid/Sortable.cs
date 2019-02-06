@@ -12,16 +12,19 @@ namespace Eynon.FilterGrid
         public enum DatabaseType
         {
             MSSQL = 1,
-            MYSQL = 2
+            MYSQL = 2,
+            Default = 3
         }
 
-        public const DatabaseType DBType = DatabaseType.MYSQL;
+        public static DatabaseType DBType = DatabaseType.MYSQL;
+        private DatabaseType _dbtype = DatabaseType.MYSQL;
         protected int Total { get; set; }
         protected Dictionary<string, string> SortableColumns { get; set; }
 
-        public Sortable(Dictionary<string, string> sortableColumns)
+        public Sortable(Dictionary<string, string> sortableColumns, DatabaseType dbtype = DatabaseType.Default)
         {
             SortableColumns = sortableColumns;
+            _dbtype = dbtype == DatabaseType.Default ? DBType : dbtype;
         }
 
         public IEnumerable<T> Sort(DbSet<T> db, string query, FilterOptions options, List<string> fields)
@@ -99,7 +102,7 @@ namespace Eynon.FilterGrid
                 query += options.DefaultOrderColumn;
             }
 
-            if (DBType == DatabaseType.MSSQL)
+            if (_dbtype == DatabaseType.MSSQL)
             {
                 // Offset
                 query += " OFFSET " + (options.Page * options.PageSize - options.PageSize) + " ROWS";
