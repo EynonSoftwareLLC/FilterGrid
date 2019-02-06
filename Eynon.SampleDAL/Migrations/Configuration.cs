@@ -21,6 +21,7 @@ namespace Eynon.SampleDAL.Migrations
             //FIPS.Instance.AddOrUpdate(new Entities.FIPS() { STATE = "", STATEFP = "", COUNTYFP = "", COUNTYNAME = "", CLASSFP = "" });
             // Regex for CSV: ([A-Za-z]{2}),([0-9]{2}),([0-9]{3}),([^,]+),([^\r\n]+)
             //                FIPS.Instance.AddOrUpdate\(new Entities.FIPS() { STATE = "$1", STATEFP = "$2", COUNTYFP = "$3", COUNTYNAME = "$4", CLASSFP = "$5" }\);
+            /*
             FIPS.Instance.AddOrUpdate(new Entities.FIPS { STATE = "AL", STATEFP = "01", COUNTYFP = "001", COUNTYNAME = "Autauga County", CLASSFP = "H1" });
             FIPS.Instance.AddOrUpdate(new Entities.FIPS { STATE = "AL", STATEFP = "01", COUNTYFP = "003", COUNTYNAME = "Baldwin County", CLASSFP = "H1" });
             FIPS.Instance.AddOrUpdate(new Entities.FIPS { STATE = "AL", STATEFP = "01", COUNTYFP = "005", COUNTYNAME = "Barbour County", CLASSFP = "H1" });
@@ -3256,7 +3257,7 @@ namespace Eynon.SampleDAL.Migrations
             FIPS.Instance.AddOrUpdate(new Entities.FIPS { STATE = "VI", STATEFP = "78", COUNTYFP = "010", COUNTYNAME = "St. Croix Island", CLASSFP = "H4" });
             FIPS.Instance.AddOrUpdate(new Entities.FIPS { STATE = "VI", STATEFP = "78", COUNTYFP = "020", COUNTYNAME = "St. John Island", CLASSFP = "H4" });
             FIPS.Instance.AddOrUpdate(new Entities.FIPS { STATE = "VI", STATEFP = "78", COUNTYFP = "030", COUNTYNAME = "St. Thomas Island", CLASSFP = "H4" });
-
+            */
         }
     }
 }

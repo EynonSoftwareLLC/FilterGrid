@@ -27,3 +27,29 @@ textarea {
     background-color: #000000;
     padding: 4px;
 }
+
+ul.navbar-nav.github {
+    float: right;
+}
+
+.navbar-nav > li.github {
+    float: right;
+}
+
+li.github > a {
+    float: right;
+    background-color: #FFFFFF;
+    margin: 10px;
+    border-radius: 4px;
+    display: block;
+    color: #888888;
+    padding: 4px 8px;
+}
+
+    li.github > a > span {
+        color: #555555;
+    }
+
+li.github > a > svg {
+    vertical-align: text-bottom;
+}
